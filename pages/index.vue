@@ -66,8 +66,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main className="bg-gray-800 min-h-screen flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center space-y-4 mb-10">
+  <main className="bg-gray-800 min-h-screen flex flex-col items-center justify-center py-20">
+    <div class="flex flex-col items-center space-y-4 mb-10 px-4">
       <button @click="onUpdate"
         :disabled="loading"
         :class="loading ? 'bg-gray-600 cursor-not-allowed' : 'bg-yellow-500 hover:bg-yellow-600'"
