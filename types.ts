@@ -8,8 +8,3 @@ export interface ICoin {
   color?: string;
   diff?: number;
 }
-
-export interface ICoinToUpdate {
-  id: string;
-  change: string;
-}
