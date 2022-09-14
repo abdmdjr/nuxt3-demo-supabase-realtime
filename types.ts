@@ -1,5 +1,6 @@
 export interface ICoin {
   id: string;
+  updated_at: string;
   name: string;
   weight: number;
   img: string;
