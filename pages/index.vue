@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import type { RealtimeSubscription } from "@supabase/supabase-js";
-import type { ICoin } from "@/types";
+import type { Coin } from "@/types";
 
 const supabase = useSupabaseClient();
 let subscription: RealtimeSubscription;
 
-const coins = ref<ICoin[]>([]);
+const coins = ref<Coin[]>([]);
 
-const { data } = await supabase.from<ICoin>("coins").select("*");
+const { data } = await supabase.from<Coin>("coins").select("*");
 coins.value = data;
 
-const onChangePrice = (currentCoinIndex: number, newCoin: ICoin) => {
+const onChangePrice = (currentCoinIndex: number, newCoin: Coin) => {
   const isMoreOrLess = coins.value[currentCoinIndex].price > newCoin.price ? "-" : "+";
   coins.value[currentCoinIndex] = {
     ...coins.value[currentCoinIndex],
