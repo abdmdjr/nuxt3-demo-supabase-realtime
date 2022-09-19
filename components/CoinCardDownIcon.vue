@@ -9,5 +9,3 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     <ChevronDoubleDownIcon class="absolute h-6 w-6 text-white animate-pulse" />
   </span>
 </template>
-
-<style lang="scss"></style>

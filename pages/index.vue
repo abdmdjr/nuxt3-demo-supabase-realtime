@@ -14,10 +14,10 @@ onMounted(() => {
   subscription = supabase
     .from("coins")
     .on("UPDATE", (payload) => {
-      const currentCoinIndex = coins.value.findIndex(
-        (coin) => coin.id === payload.new.id
-      );
       const newCoin = payload.new;
+      const currentCoinIndex = coins.value.findIndex(
+        (coin) => coin.id === newCoin.id
+      );
 
       if (coins.value[currentCoinIndex].price !== newCoin.price) {
         onChangePrice(currentCoinIndex, newCoin);
@@ -32,7 +32,8 @@ onUnmounted(() => {
 });
 
 const onChangePrice = (currentCoinIndex: number, newCoin: Coin) => {
-  const isMoreOrLess = coins.value[currentCoinIndex].price > newCoin.price ? "-" : "+";
+  const isMoreOrLess =
+    coins.value[currentCoinIndex].price > newCoin.price ? "-" : "+";
   coins.value[currentCoinIndex] = {
     ...coins.value[currentCoinIndex],
     price: newCoin.price,

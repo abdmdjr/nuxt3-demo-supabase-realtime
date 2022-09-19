@@ -107,6 +107,16 @@
     @apply px-4 py-5 bg-opacity-80 font-medium leading-tight uppercase group-hover:bg-yellow-500 focus:bg-yellow-400 focus:outline-none focus:ring-0 active:bg-yellow-700 transition ease-in-out;
   }
   
+  .price-up-color {
+    @apply bg-red-500 group-hover:bg-red-500 focus:bg-red-400 focus:outline-none focus:ring-0 active:bg-red-700;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .price-down-color {
+    @apply bg-green-500 group-hover:bg-green-500 focus:bg-green-400 focus:outline-none focus:ring-0 active:bg-green-700;
+    transition: all 0.5s ease-in-out;
+  }
+  
   .card-glassmorphism {
     z-index: 1;
     background-image: radial-gradient(
