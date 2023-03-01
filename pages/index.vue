@@ -32,13 +32,13 @@ onUnmounted(() => {
 });
 
 const onChangePrice = (currentCoinIndex: number, newCoin: Coin) => {
-  const isMoreOrLess =
+  const symbol =
     coins.value[currentCoinIndex].price > newCoin.price ? "-" : "+";
   coins.value[currentCoinIndex] = {
     ...coins.value[currentCoinIndex],
     price: newCoin.price,
-    change: isMoreOrLess,
-    color: isMoreOrLess === "+" ? "price-up-color" : "price-down-color",
+    change: symbol,
+    color: symbol === "+" ? "price-up-color" : "price-down-color",
     diff: parseFloat(
       Math.abs(newCoin.price - coins.value[currentCoinIndex].price).toFixed(2)
     ),
