@@ -15,7 +15,7 @@ coins.value = data;
 const onUpdate = () => {
   coins.value.forEach(async (coin) => {
     const newPrice = Math.floor(Math.random() * (800 - 300)) + 300;
-    await supabase.from("coins").update([{ id: coin.id, price: newPrice }]);
+    await supabase.from("coins").update([{ id: coin.id, price: newPrice }]).eq("id", coin.id);
   });
 };
 
