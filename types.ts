@@ -1,5 +1,5 @@
 export interface ICoin {
-  id: string;
+  id: number;
   updated_at: string;
   name: string;
   weight: number;

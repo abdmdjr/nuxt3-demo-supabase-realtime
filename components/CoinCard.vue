@@ -49,7 +49,7 @@
             </div>
             <span
               class="inline-flex text-xs font-bold group-hover:text-amber-400 transition duration-150 ease-in-out"
-              >poids : {{ props.coin.weight }}gr</span
+              >weight : {{ props.coin.weight }}gr</span
             >
           </h3>
           <div class="flex items-center justify-center w-full text-base xs:text-sm sm:text-lg">
@@ -64,7 +64,7 @@
                 :class="colorClass"
               >
               <span v-if="!props.coin.change">
-                Meilleur prix
+                Best price
               </span>
               <span v-else class="animate-pulse">
                 {{ props.coin.change }} {{ props.coin.diff }} €
